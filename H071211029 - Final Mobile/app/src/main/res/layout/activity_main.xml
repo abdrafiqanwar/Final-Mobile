@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="20dp">
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toolbar"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/nav"/>
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="4dp"
+        android:elevation="20dp">
+        <LinearLayout
+            android:id="@+id/layout_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_movies"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_movie_24" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Movies"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_shows"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_tv_24"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TV Shows"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_favorite_border_24"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Favorites"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
